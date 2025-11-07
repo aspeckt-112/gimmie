@@ -1,7 +1,10 @@
 ﻿using Gimmie.Console.Commands;
 
-GimmeCommand gimmeCommand = new();
+RootCommand rootCommand = new();
 
-await gimmeCommand
+rootCommand.Subcommands.Add(new GuidCommand());
+rootCommand.Subcommands.Add(new UppercaseCommand());
+
+await rootCommand
     .Parse(args)
     .InvokeAsync();

@@ -1,6 +1,6 @@
 namespace Gimmie.Console.Commands;
 
-public class GuidCommand : Command
+public sealed class GuidCommand : Command
 {
     private const string CommandName = "guid";
     private const string CommandDescription = "Generates a new GUID.";
