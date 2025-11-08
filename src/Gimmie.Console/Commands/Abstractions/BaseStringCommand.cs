@@ -1,18 +1,20 @@
 namespace Gimmie.Console.Commands.Abstractions;
 
-public abstract class StringCommand : Command
+internal abstract class BaseStringCommand : Command
 {
-    protected StringCommand(
+    private const string TextArgumentName = "text";
+
+    protected BaseStringCommand(
         string name,
         string? description = null)
         : base(name, description)
     {
-        Argument<string[]> inputTextArgument = new("text")
+        Argument<string[]> inputTextArgument = new(TextArgumentName)
         {
             Description = "The text to convert.", Arity = ArgumentArity.OneOrMore
         };
 
-        Arguments.Add(inputTextArgument);
+        Add(inputTextArgument);
 
         SetAction(parseResult =>
         {
@@ -24,9 +26,14 @@ public abstract class StringCommand : Command
             }
 
             string input = string.Join(" ", parsedArgument);
-            System.Console.WriteLine(Convert(input));
+
+            System.Console.WriteLine(InputTransformer is not null
+                ? Execute(InputTransformer(parseResult, input))
+                : Execute(input));
         });
     }
 
-    protected abstract string Convert(string input);
+    protected virtual Func<ParseResult, string, string>? InputTransformer => null;
+
+    protected abstract string Execute(string input);
 }
