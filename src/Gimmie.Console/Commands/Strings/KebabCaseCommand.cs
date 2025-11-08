@@ -4,7 +4,7 @@ using Gimmie.Console.Converters;
 namespace Gimmie.Console.Commands.Strings;
 
 internal sealed class KebabCaseCommand()
-    : CaseVariantBaseStringCommand(CommandName, CommandDescription, Placeholder)
+    : CaseVariantSingleInputCommand(CommandName, CommandDescription, Placeholder)
 {
     private const string CommandName = "kebabcase";
     private const string CommandDescription = "Converts input text to kebab case.";

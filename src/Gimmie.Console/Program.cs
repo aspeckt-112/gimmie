@@ -5,6 +5,7 @@ RootCommand rootCommand = new();
 
 AddGuidCommand(rootCommand);
 AddStringCommands(rootCommand);
+AddLengthCommand(rootCommand);
 
 return await rootCommand
     .Parse(args)
@@ -26,4 +27,9 @@ static void AddStringCommands(RootCommand rootCommand)
     stringCommand.Subcommands.Add(new PascalCaseCommand());
     stringCommand.Subcommands.Add(new SnakeCaseCommand());
     stringCommand.Subcommands.Add(new KebabCaseCommand());
+}
+
+static void AddLengthCommand(RootCommand rootCommand)
+{
+    rootCommand.Subcommands.Add(new LengthCommand());
 }

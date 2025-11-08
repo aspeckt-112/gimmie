@@ -2,7 +2,7 @@ using Gimmie.Console.Commands.Abstractions;
 
 namespace Gimmie.Console.Commands.Strings;
 
-internal sealed class LowercaseCommand() : BaseStringCommand(CommandName, CommandDescription)
+internal sealed class LowercaseCommand() : SingleInputCommand(CommandName, CommandDescription)
 {
     private const string CommandName = "lowercase";
     private const string CommandDescription = "Converts input text to lowercase.";

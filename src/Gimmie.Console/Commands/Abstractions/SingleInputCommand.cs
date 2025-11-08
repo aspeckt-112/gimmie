@@ -1,10 +1,10 @@
 namespace Gimmie.Console.Commands.Abstractions;
 
-internal abstract class BaseStringCommand : Command
+internal abstract class SingleInputCommand : Command
 {
     private const string TextArgumentName = "text";
 
-    protected BaseStringCommand(
+    protected SingleInputCommand(
         string name,
         string? description = null)
         : base(name, description)

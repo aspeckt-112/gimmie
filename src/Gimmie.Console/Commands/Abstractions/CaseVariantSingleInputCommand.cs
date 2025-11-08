@@ -1,11 +1,11 @@
 namespace Gimmie.Console.Commands.Abstractions;
 
-internal abstract class CaseVariantBaseStringCommand : BaseStringCommand
+internal abstract class CaseVariantSingleInputCommand : SingleInputCommand
 {
     private const string UppercaseOptionName = "--uppercase";
     private const string UppercaseOptionAlias = "-u";
 
-    protected CaseVariantBaseStringCommand(
+    protected CaseVariantSingleInputCommand(
         string name,
         string description,
         string placeholder)

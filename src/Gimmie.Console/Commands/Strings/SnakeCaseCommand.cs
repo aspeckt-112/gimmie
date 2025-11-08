@@ -3,7 +3,7 @@ using Gimmie.Console.Converters;
 
 namespace Gimmie.Console.Commands.Strings;
 
-internal sealed class SnakeCaseCommand() : CaseVariantBaseStringCommand(CommandName, CommandDescription, Placeholder)
+internal sealed class SnakeCaseCommand() : CaseVariantSingleInputCommand(CommandName, CommandDescription, Placeholder)
 {
     private const string CommandName = "snakecase";
     private const string CommandDescription = "Converts input text to snake case.";

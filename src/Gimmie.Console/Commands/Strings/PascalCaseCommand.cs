@@ -3,7 +3,7 @@ using Gimmie.Console.Converters;
 
 namespace Gimmie.Console.Commands.Strings;
 
-internal sealed class PascalCaseCommand() : BaseStringCommand(CommandName, CommandDescription)
+internal sealed class PascalCaseCommand() : SingleInputCommand(CommandName, CommandDescription)
 {
     private const string CommandName = "pascalcase";
     private const string CommandDescription = "Converts input text to pascal case.";
