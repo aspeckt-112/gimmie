@@ -3,6 +3,9 @@ using Gimmie.Console.Converters;
 
 namespace Gimmie.Console.Commands.Strings;
 
+/// <summary>
+/// Converts input text to kebab case.
+/// </summary>
 internal sealed class KebabCaseCommand()
     : CaseVariantSingleInputCommand(CommandName, CommandDescription, Placeholder)
 {
