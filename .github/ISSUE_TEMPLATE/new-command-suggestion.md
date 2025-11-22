@@ -1,7 +1,7 @@
 ---
-name: New command suggestion
-about: The suggestion for a new command to add to Gimmie.
-title: ''
+name: New Command Suggestion
+about: The template for suggesting new commands to add
+title: "[NEW COMMAND]"
 labels: enhancement
 assignees: ''
 
@@ -14,3 +14,5 @@ assignees: ''
 **Args**
 
 -  NAME - default **Y/N**
+
+**Comments**
