@@ -1,5 +1,3 @@
-using Gimmie.Console.Constants;
-
 namespace Gimmie.Console.Commands;
 
 /// <summary>

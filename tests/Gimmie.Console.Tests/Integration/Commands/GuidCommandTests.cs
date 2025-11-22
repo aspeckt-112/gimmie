@@ -1,22 +1,26 @@
 namespace Gimmie.Console.Tests.Integration.Commands;
 
+[Collection("Sequential Console Collection")]
 public class GuidCommandTests
 {
+    private readonly CommandRunnerFixture _fixture;
+
+    public GuidCommandTests(CommandRunnerFixture fixture)
+    {
+        _fixture = fixture;
+    }
+
     [Fact]
     public async Task GuidCommand_ShouldGenerateGuid()
     {
         // Arrange
-        StringWriter output = new();
-        System.Console.SetOut(output);
-
         string[] args = [CommandNames.Guid];
 
         // Act
-        int exitCode = await Program.Main(args);
+        (int exitCode, string result) = await _fixture.ExecuteCommand(args);
 
         // Assert
         Assert.Equal(0, exitCode);
-        string result = output.ToString().Trim();
         Assert.True(Guid.TryParse(result, out _), "The output is not a valid GUID.");
     }
 }

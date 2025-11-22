@@ -21,6 +21,7 @@
     <ItemGroup>
         <Using Include="Xunit" />
         <Using Include="Gimmie.Console.Constants" />
+        <Using Include="Gimmie.Console.Tests.Infrastructure" />
     </ItemGroup>
 
     <ItemGroup>
