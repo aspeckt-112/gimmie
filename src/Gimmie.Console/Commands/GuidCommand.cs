@@ -7,6 +7,10 @@ namespace Gimmie.Console.Commands;
 /// </summary>
 public sealed class GuidCommand : Command
 {
+    /// <summary>
+    /// Initializes a new instance of the <see cref="GuidCommand"/> class.
+    /// </summary>
+    /// <returns>A new instance of the <see cref="GuidCommand"/> class.</returns>
     public GuidCommand() : base(CommandNames.Guid, CommandDescriptions.Guid)
     {
         SetAction(_ =>
