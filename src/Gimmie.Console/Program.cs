@@ -15,7 +15,8 @@ public class Program
     public static async Task<int> Main(string[] args)
     {
         RootCommand rootCommand = new RootCommand().WithSubcommands(
-            new GuidCommand()
+            new GuidCommand(),
+            new HashCommand()
         );
 
         return await rootCommand

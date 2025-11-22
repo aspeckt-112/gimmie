@@ -11,6 +11,7 @@
 
     <ItemGroup>
         <Using Include="System.CommandLine" />
+        <Using Include="Gimmie.Console.Constants" />
     </ItemGroup>
 
 </Project>
