@@ -7,17 +7,29 @@
       "commandName": "Project",
       "commandLineArgs": "guid"
     },
-    "Hash": {
-      "commandName": "Project",
-      "commandLineArgs": "hash"
-    },
-    "HashMd5_WithInput": {
+    "HashMd5": {
       "commandName": "Project",
       "commandLineArgs": "hash HelloWorld md5"
     },
-    "HashSha1_WithInput": {
+    "HashSha1": {
       "commandName": "Project",
       "commandLineArgs": "hash HelloWorld sha1"
+    },
+    "HashSha256": {
+      "commandName": "Project",
+      "commandLineArgs": "hash HelloWorld sha256"
+    },
+    "HashSha224": {
+      "commandName": "Project",
+      "commandLineArgs": "hash HelloWorld sha224"
+    },
+    "HashSha512": {
+      "commandName": "Project",
+      "commandLineArgs": "hash HelloWorld sha512"
+    },
+    "HashSha384": {
+      "commandName": "Project",
+      "commandLineArgs": "hash HelloWorld sha384"
     }
   }
 }
