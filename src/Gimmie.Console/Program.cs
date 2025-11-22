@@ -1,35 +1,25 @@
 ﻿using Gimmie.Console.Commands;
-using Gimmie.Console.Commands.Strings;
 
-RootCommand rootCommand = new();
+namespace Gimmie.Console;
 
-AddGuidCommand(rootCommand);
-AddStringCommands(rootCommand);
-AddLengthCommand(rootCommand);
+// ReSharper disable once ClassNeverInstantiated.Global
 
-return await rootCommand
-    .Parse(args)
-    .InvokeAsync();
-
-static void AddGuidCommand(RootCommand rootCommand)
+/// <summary>
+/// The main program class for the Gimmie console application.
+/// </summary>
+/// <remarks>
+/// Intentionally not using a top-level statements to facilitate integration testing.
+/// </remarks>
+public class Program
 {
-    rootCommand.Subcommands.Add(new GuidCommand());
-}
+    public static async Task<int> Main(string[] args)
+    {
+        RootCommand rootCommand = new RootCommand().WithSubcommands(
+            new GuidCommand()
+        );
 
-static void AddStringCommands(RootCommand rootCommand)
-{
-    Command stringCommand = new("string", "String manipulation commands");
-    rootCommand.Subcommands.Add(stringCommand);
-
-    stringCommand.Subcommands.Add(new UppercaseCommand());
-    stringCommand.Subcommands.Add(new LowercaseCommand());
-    stringCommand.Subcommands.Add(new CamelCaseCommand());
-    stringCommand.Subcommands.Add(new PascalCaseCommand());
-    stringCommand.Subcommands.Add(new SnakeCaseCommand());
-    stringCommand.Subcommands.Add(new KebabCaseCommand());
-}
-
-static void AddLengthCommand(RootCommand rootCommand)
-{
-    rootCommand.Subcommands.Add(new LengthCommand());
+        return await rootCommand
+            .Parse(args)
+            .InvokeAsync();
+    }
 }

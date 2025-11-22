@@ -1,11 +1,13 @@
+using Gimmie.Console.Constants;
+
 namespace Gimmie.Console.Commands;
 
-internal sealed class GuidCommand : Command
+/// <summary>
+/// The 'guid' command generates a new GUID.
+/// </summary>
+public sealed class GuidCommand : Command
 {
-    private const string CommandName = "guid";
-    private const string CommandDescription = "Generates a new GUID.";
-
-    public GuidCommand() : base(CommandName, CommandDescription)
+    public GuidCommand() : base(CommandNames.Guid, CommandDescriptions.Guid)
     {
         SetAction(_ =>
         {
