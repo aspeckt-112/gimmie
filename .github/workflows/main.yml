@@ -21,5 +21,8 @@ jobs:
       - name: Restore
         run: dotnet restore
 
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
       - name: Test
-        run: dotnet test --configuration Release --nologo
+        run: dotnet test --configuration Release --no-build --nologo
