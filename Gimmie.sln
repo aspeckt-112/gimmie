@@ -8,6 +8,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Packages.props = Directory.Packages.props
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		global.json = global.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimmie.Console", "src\Gimmie.Console\Gimmie.Console.csproj", "{24465AFD-2460-4123-AD49-C8839EA0D9EB}"
@@ -15,6 +16,18 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{80BBA595-2A83-4C5B-B00B-463A60D00C31}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gimmie.Console.Tests", "tests\Gimmie.Console.Tests\Gimmie.Console.Tests.csproj", "{43A4A396-3A95-45AF-B3E0-F3B70D97613F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{4C92F873-3A39-4A37-97EF-54928EB9C58B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEMPLATE", "{880AA661-24B0-4C95-A33A-7CE5992A486C}"
+	ProjectSection(SolutionItems) = preProject
+		.github\ISSUE_TEMPLATE\new-command-suggestion.md = .github\ISSUE_TEMPLATE\new-command-suggestion.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{A16D2A82-FF16-4A87-985E-F7F13BFDEB3B}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\main.yml = .github\workflows\main.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +37,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{24465AFD-2460-4123-AD49-C8839EA0D9EB} = {9437E7EA-6228-4C14-BCA1-0A08AC5881F9}
 		{43A4A396-3A95-45AF-B3E0-F3B70D97613F} = {80BBA595-2A83-4C5B-B00B-463A60D00C31}
+		{880AA661-24B0-4C95-A33A-7CE5992A486C} = {4C92F873-3A39-4A37-97EF-54928EB9C58B}
+		{A16D2A82-FF16-4A87-985E-F7F13BFDEB3B} = {4C92F873-3A39-4A37-97EF-54928EB9C58B}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{24465AFD-2460-4123-AD49-C8839EA0D9EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
