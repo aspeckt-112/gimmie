@@ -1,11 +1,9 @@
-using Gimmie.Console.Constants;
-
 namespace Gimmie.Console.Commands;
 
 /// <summary>
 /// The 'guid' command generates a new GUID.
 /// </summary>
-public sealed class GuidCommand : Command
+internal sealed class GuidCommand : Command
 {
     /// <summary>
     /// Initializes a new instance of the <see cref="GuidCommand"/> class.

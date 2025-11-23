@@ -1,0 +1,31 @@
+{
+  "profiles": {
+    "NoArgs": {
+      "commandName": "Project"
+    },
+    "Guid": {
+      "commandName": "Project",
+      "commandLineArgs": "guid"
+    },
+    "HashMd5": {
+      "commandName": "Project",
+      "commandLineArgs": "hash HelloWorld md5"
+    },
+    "HashSha1": {
+      "commandName": "Project",
+      "commandLineArgs": "hash HelloWorld sha1"
+    },
+    "HashSha256": {
+      "commandName": "Project",
+      "commandLineArgs": "hash HelloWorld sha256"
+    },
+    "HashSha512": {
+      "commandName": "Project",
+      "commandLineArgs": "hash HelloWorld sha512"
+    },
+    "HashSha384": {
+      "commandName": "Project",
+      "commandLineArgs": "hash HelloWorld sha384"
+    }
+  }
+}

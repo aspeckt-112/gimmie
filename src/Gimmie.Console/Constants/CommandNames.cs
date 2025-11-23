@@ -12,4 +12,34 @@ public static class CommandNames
     /// The 'guid' command.
     /// </summary>
     public const string Guid = "guid";
+
+    /// <summary>
+    /// The 'hash' command.
+    /// </summary>
+    public const string Hash = "hash";
+
+    /// <summary>
+    /// The 'md5' subcommand under the 'hash' command.
+    /// </summary>
+    public const string HashMd5 = "md5";
+
+    /// <summary>
+    /// The 'sha1' subcommand under the 'hash' command.
+    /// </summary>
+    public const string HashSha1 = "sha1";
+
+    /// <summary>
+    /// The 'sha256' subcommand under the 'hash' command.
+    /// </summary>
+    public const string HashSha256 = "sha256";
+
+    /// <summary>
+    /// The 'sha512' subcommand under the 'hash' command.
+    /// </summary>
+    public const string HashSha512 = "sha512";
+
+    /// <summary>
+    /// The 'sha384' subcommand under the 'hash' command.
+    /// </summary>
+    public const string HashSha384 = "sha384";
 }
