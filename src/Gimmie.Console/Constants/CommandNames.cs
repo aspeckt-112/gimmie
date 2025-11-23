@@ -34,11 +34,6 @@ public static class CommandNames
     public const string HashSha256 = "sha256";
 
     /// <summary>
-    /// The 'sha224' subcommand under the 'hash' command.
-    /// </summary>
-    public const string HashSha224 = "sha224";
-
-    /// <summary>
     /// The 'sha512' subcommand under the 'hash' command.
     /// </summary>
     public const string HashSha512 = "sha512";

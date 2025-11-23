@@ -19,10 +19,6 @@
       "commandName": "Project",
       "commandLineArgs": "hash HelloWorld sha256"
     },
-    "HashSha224": {
-      "commandName": "Project",
-      "commandLineArgs": "hash HelloWorld sha224"
-    },
     "HashSha512": {
       "commandName": "Project",
       "commandLineArgs": "hash HelloWorld sha512"

@@ -20,10 +20,11 @@ public class CommandRunnerFixture : IAsyncLifetime
         }
     }
 
-    public async ValueTask DisposeAsync()
+    public ValueTask DisposeAsync()
     {
-        await _originalOutput.DisposeAsync();
+        // Just restore the original output, don't dispose it
         System.Console.SetOut(_originalOutput);
+        return ValueTask.CompletedTask;
     }
 
     public ValueTask InitializeAsync() => ValueTask.CompletedTask;

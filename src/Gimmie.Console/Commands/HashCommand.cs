@@ -3,7 +3,13 @@ using System.Security.Cryptography;
 
 namespace Gimmie.Console.Commands;
 
-public sealed class HashCommand : Command
+/// <summary>
+/// The 'hash' command computes cryptographic hashes of input strings.
+/// </summary>
+/// <remarks>
+/// This command supports multiple hashing algorithms including MD5, SHA1, SHA256, SHA512, and SHA384.
+/// </remarks>
+internal sealed class HashCommand : Command
 {
     private const string InputArgumentName = "input";
 
@@ -19,7 +25,6 @@ public sealed class HashCommand : Command
         Subcommands.Add(new Md5Command());
         Subcommands.Add(new Sha1Command());
         Subcommands.Add(new Sha256Command());
-        Subcommands.Add(new Sha224Command());
         Subcommands.Add(new Sha512Command());
         Subcommands.Add(new Sha384Command());
     }
@@ -62,16 +67,6 @@ public sealed class HashCommand : Command
     private class Sha256Command() : HashCommandBase(CommandNames.HashSha256, CommandDescriptions.HashSha256)
     {
         protected override byte[] ComputeHash(byte[] inputBytes) => SHA256.HashData(inputBytes);
-    }
-
-    private class Sha224Command() : HashCommandBase(CommandNames.HashSha224, CommandDescriptions.HashSha224)
-    {
-        protected override byte[] ComputeHash(byte[] inputBytes)
-        {
-            Span<byte> fullHash = stackalloc byte[32];
-            SHA256.HashData(inputBytes, fullHash);
-            return fullHash[..28].ToArray();
-        }
     }
 
     private class Sha512Command() : HashCommandBase(CommandNames.HashSha512, CommandDescriptions.HashSha512)

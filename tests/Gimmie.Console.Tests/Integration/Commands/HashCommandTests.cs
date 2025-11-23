@@ -100,35 +100,6 @@ public class HashCommandTests
     }
 
     [Fact]
-    public async Task HashCommand_Sha224SubcommandWithNoInput_ShouldDisplayNoInputMessage()
-    {
-        // Arrange
-        string[] args = [CommandNames.Hash, CommandNames.HashSha224];
-
-        // Act
-        (int exitCode, string result) = await _fixture.ExecuteCommand(args);
-
-        // Assert
-        Assert.Equal(0, exitCode);
-        Assert.Equal(MessageConstants.NoInputProvided, result);
-    }
-
-    [Fact]
-    public async Task HashCommand_Sha224SubcommandWithInput_ShouldDisplaySha224Hash()
-    {
-        // Arrange
-        const string expectedHash = "dffd6021bb2bd5b0af676290809ec3a53191dd81c7f70a4b28688a36";
-        string[] args = [CommandNames.Hash, HelloWorldInput, CommandNames.HashSha224];
-
-        // Act
-        (int exitCode, string result) = await _fixture.ExecuteCommand(args);
-
-        // Assert
-        Assert.Equal(0, exitCode);
-        Assert.Equal(expectedHash, result);
-    }
-
-    [Fact]
     public async Task HashCommand_Sha512SubcommandWithNoInput_ShouldDisplayNoInputMessage()
     {
         // Arrange
