@@ -12,8 +12,7 @@ internal sealed class PortCommand : Command
     {
         SetAction(_ =>
         {
-            var random = new Random();
-            int portNumber = random.Next(1024, 65536);
+            int portNumber = Random.Shared.Next(1024, 65536);
             System.Console.WriteLine(portNumber);
         });
     }
