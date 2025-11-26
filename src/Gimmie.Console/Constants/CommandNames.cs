@@ -42,4 +42,9 @@ public static class CommandNames
     /// The 'sha384' subcommand under the 'hash' command.
     /// </summary>
     public const string HashSha384 = "sha384";
+
+    /// <summary>
+    /// The 'port' command.
+    /// </summary>
+    public const string Port = "port";
 }

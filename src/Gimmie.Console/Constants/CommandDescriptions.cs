@@ -39,4 +39,9 @@ internal static class CommandDescriptions
     /// The description for the 'sha384' subcommand under the 'hash' command.
     /// </summary>
     internal const string HashSha384 = "Generates a SHA-384 hash.";
+
+    /// <summary>
+    /// The description for the 'port' command.
+    /// </summary>
+    internal const string Port = "Generates a random port number.";
 }

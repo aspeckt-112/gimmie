@@ -16,7 +16,8 @@ public class Program
     {
         RootCommand rootCommand = new RootCommand().WithSubcommands(
             new GuidCommand(),
-            new HashCommand()
+            new HashCommand(),
+            new PortCommand()
         );
 
         return await rootCommand

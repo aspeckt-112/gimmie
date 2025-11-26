@@ -26,6 +26,10 @@
     "HashSha384": {
       "commandName": "Project",
       "commandLineArgs": "hash HelloWorld sha384"
+    },
+    "Port": {
+      "commandName": "Project",
+      "commandLineArgs": "port"
     }
   }
 }
