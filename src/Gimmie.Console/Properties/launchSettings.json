@@ -30,6 +30,18 @@
     "Port": {
       "commandName": "Project",
       "commandLineArgs": "port"
+    },
+    "Base64Encode": {
+      "commandName": "Project",
+      "commandLineArgs": "base64 HelloWorld encode"
+    },
+    "Base64Decode": {
+      "commandName": "Project",
+      "commandLineArgs": "base64 SGVsbG9Xb3JsZA== decode"
+    },
+    "Base64UrlEncode": {
+      "commandName": "Project",
+      "commandLineArgs": "base64 HelloWorld encode -u"
     }
   }
 }
