@@ -6,7 +6,7 @@ namespace Gimmie.Console.Commands;
 /// <remarks>
 /// The port number is generated within the valid range for TCP/UDP ports (1024-65535).
 /// </remarks>
-public class PortCommand : Command
+internal sealed class PortCommand : Command
 {
     public PortCommand() : base(CommandNames.Port, CommandDescriptions.Port)
     {
