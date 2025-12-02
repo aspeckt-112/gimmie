@@ -79,8 +79,16 @@ internal sealed class Base64Command : Command
                 }
             }
 
-            byte[] decodedBytes = Convert.FromBase64String(input);
-            return Encoding.UTF8.GetString(decodedBytes);
+            try
+            {
+                byte[] decodedBytes = Convert.FromBase64String(input);
+                return Encoding.UTF8.GetString(decodedBytes);
+            }
+            catch (FormatException)
+            {
+                System.Console.WriteLine("Error: The provided input is not a valid Base64 string.");
+                return string.Empty;
+            }
         }
     }
 }
