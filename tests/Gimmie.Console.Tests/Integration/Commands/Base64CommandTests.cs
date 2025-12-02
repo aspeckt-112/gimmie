@@ -55,4 +55,47 @@ public class Base64CommandTests
         Assert.Equal(0, exitCode);
         Assert.Equal(HelloWorldBase64UrlSafe, result);
     }
+
+    [Fact]
+    public async Task Base64Command_DecodeSubcommandNoInput_ShouldDisplayNoInputMessage()
+    {
+        // Arrange
+        string[] args = [CommandNames.Base64, CommandNames.Base64Decode];
+
+        // Act
+        (int exitCode, string result) = await _fixture.ExecuteCommand(args);
+
+        // Assert
+        Assert.Equal(0, exitCode);
+        Assert.Equal(MessageConstants.NoInputProvided, result);
+    }
+
+    [Fact]
+    public async Task Base64Command_DecodeSubcommandWithInput_ShouldDisplayDecodedString()
+    {
+        // Arrange
+        string[] args = [CommandNames.Base64, HelloWorldBase64Standard, CommandNames.Base64Decode];
+
+        // Act
+        (int exitCode, string result) = await _fixture.ExecuteCommand(args);
+
+        // Assert
+        Assert.Equal(0, exitCode);
+        Assert.Equal(HelloWorldInput, result);
+    }
+
+    [Fact]
+    public async Task Base64Command_DecodeSubcommandWithInputUrlSafe_ShouldDisplayDecodedString()
+    {
+        // Arrange
+        string[] args =
+            [CommandNames.Base64, HelloWorldBase64UrlSafe, CommandNames.Base64Decode, CommandOptions.UrlSafe.Name];
+
+        // Act
+        (int exitCode, string result) = await _fixture.ExecuteCommand(args);
+
+        // Assert
+        Assert.Equal(0, exitCode);
+        Assert.Equal(HelloWorldInput, result);
+    }
 }
