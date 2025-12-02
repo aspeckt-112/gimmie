@@ -8,7 +8,6 @@ namespace Gimmie.Console.Commands;
 internal sealed class Base64Command : Command
 {
     private const string InputArgumentName = "input";
-    private const string UrlSafeOptionName = "--url-safe";
 
     public Base64Command() : base(CommandNames.Base64, CommandDescriptions.Base64)
     {
@@ -39,7 +38,7 @@ internal sealed class Base64Command : Command
                     return;
                 }
 
-                bool urlSafe = result.GetValue<bool>(UrlSafeOptionName);
+                bool urlSafe = result.GetValue<bool>(CommandOptions.UrlSafe.Name);
 
                 string output = ProcessBase64(input, urlSafe);
                 System.Console.WriteLine(output);
