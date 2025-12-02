@@ -47,4 +47,19 @@ public static class CommandNames
     /// The 'port' command.
     /// </summary>
     public const string Port = "port";
+
+    /// <summary>
+    /// The 'base64' command.
+    /// </summary>
+    public const string Base64 = "base64";
+
+    /// <summary>
+    /// The 'encode' subcommand under the 'base64' command.
+    /// </summary>
+    public const string Base64Encode = "encode";
+
+    /// <summary>
+    /// The 'decode' subcommand under the 'base64' command.
+    /// </summary>
+    public const string Base64Decode = "decode";
 }

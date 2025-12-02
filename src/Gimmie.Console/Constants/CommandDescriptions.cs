@@ -44,4 +44,19 @@ internal static class CommandDescriptions
     /// The description for the 'port' command.
     /// </summary>
     internal const string Port = "Generates a random port number.";
+
+    /// <summary>
+    /// The description for the 'base64' command.
+    /// </summary>
+    internal const string Base64 = "Encode or decode strings using Base64 encoding.";
+
+    /// <summary>
+    /// The description for the 'encode' subcommand under the 'base64' command.
+    /// </summary>
+    internal const string Base64Encode = "Encodes strings using Base64 encoding.";
+
+    /// <summary>
+    /// The description for the 'decode' subcommand under the 'base64' command.
+    /// </summary>
+    internal const string Base64Decode = "Decodes strings from Base64 encoding.";
 }
