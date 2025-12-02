@@ -98,4 +98,32 @@ public class Base64CommandTests
         Assert.Equal(0, exitCode);
         Assert.Equal(HelloWorldInput, result);
     }
+
+    [Fact]
+    public async Task Base64Command_DecodeSubcommandWithInvalidCharacters_ShouldDisplayErrorMessage()
+    {
+        // Arrange
+        string[] args = [CommandNames.Base64, "Invalid!@#$", CommandNames.Base64Decode];
+
+        // Act
+        (int exitCode, string result) = await _fixture.ExecuteCommand(args);
+
+        // Assert
+        Assert.Equal(0, exitCode);
+        Assert.Equal("Error: The provided input is not a valid Base64 string.", result);
+    }
+
+    [Fact]
+    public async Task Base64Command_DecodeSubcommandWithInvalidLength_ShouldDisplayErrorMessage()
+    {
+        // Arrange
+        string[] args = [CommandNames.Base64, "abc", CommandNames.Base64Decode];
+
+        // Act
+        (int exitCode, string result) = await _fixture.ExecuteCommand(args);
+
+        // Assert
+        Assert.Equal(0, exitCode);
+        Assert.Equal("Error: The provided input is not a valid Base64 string.", result);
+    }
 }
