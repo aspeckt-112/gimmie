@@ -7,7 +7,7 @@ public static class CommandOptions
 {
     public static readonly Option<bool> UrlSafe = new("--url-safe", "-u")
     {
-        Description = "Encode/decode using URL-safe Base64. Default is standard Base64.",
+        Description = "Encode or decode using URL-safe Base64. Default is standard Base64.",
         Required = false,
         Recursive = true
     };
